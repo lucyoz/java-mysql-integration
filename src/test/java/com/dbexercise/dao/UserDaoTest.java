@@ -21,7 +21,7 @@ class UserDaoTest {
     ApplicationContext context;
 
     @Test
-    void addAndSelect() throws SQLException, ClassNotFoundException {
+    void addAndSelect() throws SQLException {
         UserDao userDao = context.getBean("awsUserDao", UserDao.class);
         String id = "23";
         userDao.add(new User(id, "NuNum","1123qqwe"));

@@ -16,7 +16,7 @@ public class UserDao {
         this.connectionMaker = connectionMaker;
     }
 
-    public void add(User user) throws SQLException, ClassNotFoundException {
+    public void add(User user) throws SQLException {
 
         Connection conn = connectionMaker.makeConnection();
         PreparedStatement ps = conn.prepareStatement(
@@ -34,7 +34,7 @@ public class UserDao {
 
     }
 
-    public User findById(String id) throws ClassNotFoundException, SQLException {
+    public User findById(String id) throws SQLException {
         Connection conn = connectionMaker.makeConnection();
 
         PreparedStatement ps = conn.prepareStatement(
